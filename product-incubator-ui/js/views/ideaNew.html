@@ -1,0 +1,46 @@
+<div id="form-container" class="oj-form-layout">
+    <div class="oj-form oj-sm-odd-cols-12 oj-md-odd-cols-2 oj-md-labels-inline">  
+
+        <div class="oj-flex oj-header-border"  >
+
+            <div style="float: right" >
+                <button id="addButton" 
+                        data-bind="click: save, 
+                        ojComponent: { component: 'ojButton', 
+            label: i18n('ideas.save'), messagesCustom: appMessages }" >
+                </button>                                                                                       
+                <button id="resetFields"
+                        data-bind="click: reset, 
+                        ojComponent: { component: 'ojButton', 
+                        label: i18n('ideas.reset') }">
+                </button>
+            
+            </div>
+
+        </div>
+        <br/>
+        <div class="oj-flex">  
+            <div class="oj-flex-item">
+                <label data-bind="text: i18n('ideas.title')" for="title"></label>
+            </div>
+            <div class="oj-flex-item">
+                <input id="title"
+                       data-bind="ojComponent: {
+                   component: 'ojInputText', 
+                           value: title,  required: true}" />      
+            </div>
+        </div>
+        <div class="oj-flex"> 
+            <div class="oj-flex-item">
+                <label for="summary">Summary</label>
+            </div>
+            <div class="oj-flex-item oj-web-applayout-max-width">
+                <textarea id="summary" rows="15" 
+                          style="resize: both; width:600px;"
+                          data-bind="ojComponent: {component: 'ojTextArea', 
+                                     value: summary,  required: true}"></textarea>
+            </div>
+        </div>
+
+    </div>  
+</div>

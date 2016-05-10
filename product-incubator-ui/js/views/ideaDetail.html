@@ -1,0 +1,77 @@
+<!--
+ Copyright (c) 2014, 2016, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+-->
+<div class="justifyCenter">
+    <div id="personaldetails" class="oj-flex oj-flex-items-pad" style="margin-bottom:26px;">
+        <div class="oj-flex-item oj-sm-1 oj-md-1 oj-lg-1 idea-photo-person-detail">
+            <img class="demo-circular-person-detail" data-bind="attr: {src: getPhoto(_id()), alt: 'photo of '+title()}"/>
+        </div>
+        <div class="oj-flex-item oj-sm-4 oj-md-4 oj-lg-4"  style="margin-top: 10px;">
+            <div class="idea-name-person-detail" data-bind="text: title"></div>
+            <div class="idea-title-and-dept-person-detail" data-bind="text: firstName() + ' ' + lastName()"></div>
+            <div class="idea-title-and-dept-person-detail" data-bind="text: jobTitle"></div>
+        </div>
+
+        <div class="oj-flex-item oj-sm-4 oj-md-4 oj-lg-4" style="margin-top: 10px;">
+            <div class="oj-flex oj-flex-items-pad">
+                <div class="idea-contact-icon idea-phone-icon"></div><div class="idea-contact-label idea-phone-label" data-bind="text: phone"></div>
+            </div>          
+            <div class="oj-flex oj-flex-items-pad">
+                <div class="idea-contact-icon idea-func-email-icon"></div><div class="idea-contact-label idea-email-label"><a data-bind="attr:{href: getEmail(email())}, text: email()"></a></div>
+            </div>
+        </div>
+        <div class="oj-flex-item oj-sm-1 oj-md-1 oj-lg-2" style="margin-top: 10px;">
+            <div class="oj-flex oj-flex-items-pad"><div class="idea-contact-icon idea-twitter-icon"></div><div class="idea-contact-label idea-twitter-label" data-bind="text: twitterId"></div></div>
+            <div class="oj-flex oj-flex-items-pad"><div class="idea-contact-icon idea-linkedin-icon"></div><div class="idea-contact-label idea-linkedin-label" data-bind="text: linkedInId"></div></div>
+        </div>
+    </div>
+    <div id="detailsview" class="oj-flex-items oj-lg-4 oj-md-4" >
+        <button id="ratingDlg"
+                data-bind="click: showRatingDlg, ojComponent: {
+                    component: 'ojButton', label: 'Rate this Idea',
+                    chroming: 'half', 
+                    icons: {start:'oj-fwk-icon oj-fwk-icon-clock'}
+                }">
+        </button>
+
+    </div>
+    <div id="details" class="oj-flex-items oj-lg-4 oj-md-4"  >
+
+        <label  for="commentsText">Summary:</label>
+        <textarea id="commentsText" rows="10"   style="resize: both; width:800px;"
+                  data-bind="ojComponent: {component: 'ojTextArea', 
+                                     value: summary,  readOnly: true}"></textarea>
+    </div>
+    <div id="dialogWrapper">
+        <div style="display:none" id="ratingDialog" title="Rate the idea !" 
+             data-bind="ojComponent:{component: 'ojDialog', initialVisibility: 'hide'}">
+            <div class="oj-dialog-body">
+                <div id="form-container" class="oj-form">
+                    <div id="ratings" class="oj-form">
+                        <label for="points">Rating(1 to 5):</label> 
+                        <input id="points"  data-bind="ojComponent: { component: 'ojInputNumber', max:5, min:0,  value:totalPoints}"/>
+
+                        <br/>
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" rows="15" 
+                                  data-bind="ojComponent: {component: 'ojTextArea', 
+                                     value: comments,  required: true}"></textarea>
+                    </div>
+                    <div class="oj-form-control-group" >
+                        <button id="submit"
+                                data-bind="click: submit, 
+                        ojComponent: { component: 'ojButton', 
+                        label: 'Submit' }">
+                        </button>                                                                                    
+                        <button id="cancel"
+                                data-bind="click: closeDialog, 
+                        ojComponent: { component: 'ojButton', 
+                        label: 'Cancel' }">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

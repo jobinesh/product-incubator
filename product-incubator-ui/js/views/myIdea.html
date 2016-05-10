@@ -1,0 +1,29 @@
+<div id="train-container" >
+
+    <!--<div data-bind="ojModule: chosenStepModule()"></div>-->
+    <div id="vtabs" 
+         data-bind="ojComponent:{component: 'ojTabs', 
+                            orientation: 'vertical',
+                             selected: 0}">
+
+        <ul>
+            <li><span>Create New Idea</span></li>
+            <li><span>Add Team Members</span></li>
+            <li><span>Add Documents and Links</span></li>
+        </ul>
+
+        <div id="newIdeaTab">
+            <div data-bind="ojModule: 'ideaNew'"/>
+        </div>
+
+        <div id="teamTab">
+            <div data-bind="ojModule: 'ideaTeam'"/>
+        </div>
+
+        <div id="docTab">
+            <div data-bind="ojModule: 'ideaDoc'"/>
+        </div>
+
+    </div>
+
+</div>

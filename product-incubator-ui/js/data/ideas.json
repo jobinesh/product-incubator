@@ -1,0 +1,30 @@
+[{
+        "id": 1,
+        "topic": "Got an idea 1",
+        "summary": "This is going to be a game changer.",
+        "submittedBy": "jobinesh.purushothaman@oracle.com",
+        "createdDate": "2015-11-10T00:00:00-08:00",
+        "modifiedDate": "2015-11-10T00:00:00-08:00",
+        "votes": 11,
+        "status": "approved"
+    },
+    {
+        "id": 2,
+        "topic": "Got an idea 2",
+        "summary": "This is going to be a game changer.",
+        "submittedBy": "jobinesh.purushothaman@oracle.com",
+        "createdDate": "2015-11-10T00:00:00-08:00",
+        "modifiedDate": "2015-11-10T00:00:00-08:00",
+        "votes": 12,
+        "status": "approved"
+    },
+    {
+        "id": 3,
+        "topic": "Got an idea 3",
+        "summary": "This is going to be a game changer.",
+        "submittedBy": "jobinesh.purushothaman@oracle.com",
+        "createdDate": "2015-11-10T00:00:00-08:00",
+        "modifiedDate": "2015-11-10T00:00:00-08:00",
+        "votes": 2,
+        "status": "rejected"
+    }]
